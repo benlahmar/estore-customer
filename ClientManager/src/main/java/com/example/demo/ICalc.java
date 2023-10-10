@@ -13,6 +13,6 @@ public interface ICalc {
 	
 	public default String hello2()
 	{
-		return "hello";
+		return "hello"; 
 	}
 }
