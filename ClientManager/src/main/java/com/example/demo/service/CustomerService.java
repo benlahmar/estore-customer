@@ -45,4 +45,10 @@ public class CustomerService implements ICustomer{
 		return prepo.save(p);
 	}
 
+	@Override
+	public Optional<Profile> findprofile(long id) {
+		// TODO Auto-generated method stub
+		return prepo.findById(id);
+	}
+
 }
