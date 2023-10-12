@@ -1,5 +1,7 @@
 package com.example.demo.entities;
 
+import org.springframework.data.annotation.ReadOnlyProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,12 +16,13 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@ReadOnlyProperty
 	long id;
 	@Column(name= "log",unique = true,nullable = false,length = 50)
 	String username;	
 	String password;
 	
-	@OneToOne
+	@OneToOne()
 	Profile profile;
 	
 	
